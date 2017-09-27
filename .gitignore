@@ -1,0 +1,8 @@
+.bowerrc
+.vscode/
+angular-build.sh
+angular-init.sh
+bin/
+obj/
+paste-this.txt
+wwwroot/
