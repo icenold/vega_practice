@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MakeService } from './services/make.service';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VehicleFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    MakeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
