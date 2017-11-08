@@ -9,14 +9,21 @@ import { MakeService } from '../../services/make.service';
 export class VehicleFormComponent implements OnInit {
 
   makes: Array<any>;
-
+  models: Array<any>;
+  vehicle:any = {};
 
   constructor(private makeService: MakeService) { }
 
   ngOnInit() {
     this.makeService.getMakes().subscribe(makes => {
       this.makes = makes;
+      console.log(makes);
     });
+  }
+
+  onMakeChange(){
+    var selectedMake = this.makes.find(m=>m.id == this.vehicle.make);
+    this.models = selectedMake? selectedMake.models: [];
   }
 
 }
