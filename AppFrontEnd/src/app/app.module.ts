@@ -8,6 +8,7 @@ import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MakeService } from './services/make.service';
 import { HttpModule } from '@angular/http';
+import { FeatureService } from './services/feature.service';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpModule } from '@angular/http';
     FormsModule
   ],
   providers: [
-    MakeService
+    MakeService,
+    FeatureService
   ],
   bootstrap: [AppComponent]
 })
